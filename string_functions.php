@@ -56,7 +56,7 @@
 //  $output = ucwords("lets see if this works");
 //  echo $output;
 
-# str_replace 
+# str_replace()
 # Replace all occurences of a search string with a replacement.
 # This function returns a string or an array with all occurrences of search in subject replaced with the given replace value.
 
