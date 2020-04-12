@@ -9,7 +9,9 @@
 </head>
 <body>
     <?php
-    echo 
+    echo 'test';
+    $personOne = new Person("Bill", 33, "Blonde");
+    var_dump($personOne);
     ?>
 </body>
 </html>
