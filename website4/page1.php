@@ -1,7 +1,14 @@
 <!-- WORKING WITH SESSIONS IN PHP -->
 <?php
     if(isset($_POST['submit'])){
-        echo 123;
+        # Every page you want to use the session data you have to use session_start function.
+        session_start(); // Start the session
+        // Session super global variable
+        $_SESSION['name'] = htmlentities($_POST['name']);
+        $_SESSION['email'] = htmlentities($_POST['email']);
+
+        # Redirect to new page. Once submit it clicked in form POST user is redirected to page2.php
+        header('Location: page2.php');
     }
 ?>
 <!DOCTYPE html>
