@@ -3,9 +3,11 @@
 //    echo $name;
     if(isset($_POST['submit'])){
         $username = htmlentities($_POST['username']);
-        // to set a cookie use setcookie function first value is the name, second value, third expiration.
-        setcookie('username', $username, time() + 3600);
+        // to set a cookie use setcookie function first value is the name, second value, third expiration time.
+        setcookie('username', $username, time() + 3600); // 1 Hour
 
+        # Redirect to new page. Once submit it clicked in form POST user is redirected to page2.php
+        header('Location: page2.php');
     }
 ?>
 <!DOCTYPE html>
