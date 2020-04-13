@@ -1,4 +1,4 @@
-<!-- WORKING WITH SESSIONS IN PHP -->
+<!-- WORKING WITH SESSIONS IN PHP, SESSIONS is stored on the server, where as cookies are stored in the browser -->
 <?php
     if(isset($_POST['submit'])){
         # Every page you want to use the session data you have to use session_start function.
