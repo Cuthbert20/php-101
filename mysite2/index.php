@@ -3,8 +3,13 @@
     if(isset($_POST['submit'])){
         $username = htmlentities($_POST['username']);
         $email = htmlentities($_POST['email']);
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         echo $username . " " . $email;
     }
+//    if(filter_has_var(INPUT_POST,$email)){
+//        $email = filter_var($email, FILTER_SANITIZE_EMAIL_EMAIL);
+//        echo $email;
+//    }
 ?>
     <div class="container">
         <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>"  style="font-weight: bolder; font-size: 2rem" action="">
