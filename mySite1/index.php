@@ -1,4 +1,14 @@
-<?php include 'class_lib.php' ?>
+<?php
+    //include 'class_lib.php'
+    // One line to include all classes we create inside our classes folder.
+    include 'includes/autoloader.inc.php';
+    // Checking for cookies and getting a count for fun.
+    if(count($_COOKIE) > 0){
+        echo 'I see ' . count($_COOKIE) . " Cookies";
+    }else {
+        echo 'No Cookies';
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">

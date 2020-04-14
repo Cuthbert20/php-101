@@ -41,7 +41,7 @@ do {
     $i++; 
 } while($i > 1);
 */
-# Foreach Lopp - For Arrays!
+# Foreach Loop - For Arrays!
 // $people = array("Spencer", "Brynne", "Ryker", "Remi");
 // foreach ($people as $val){
 //     echo $val;
