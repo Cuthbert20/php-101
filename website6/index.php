@@ -35,6 +35,13 @@
         onkeyup="showSuggestion(this.value)">
     </form>
     <p>Suggestions: <span id="output" style="font-weight: bolder"></span></p>
+    <?php
+    // Just messing around below
+    $test = array("jump", "up", "down");
+    $test[0] = "left"; // replacing jump string with left
+    $test[] = "right";
+    print_r($test);
+    ?>
 </div>
 </body>
 </html>

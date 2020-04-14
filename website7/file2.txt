@@ -1,0 +1,2 @@
+foobar7
+ writing to file again with a new line

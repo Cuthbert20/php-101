@@ -22,6 +22,7 @@ $people[] = "Matt";
 $people[] = "Jim";
 $people[] = "Me";
 
+
 // Get Query String from xmlhttp.open("GET", "suggest.php?q="+str, true);
 $q = $_REQUEST['q']; // using $_REQUEST instead of $_GET or $_POST so it will catch either.
 
