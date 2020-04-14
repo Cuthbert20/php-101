@@ -1,5 +1,5 @@
 <?php
-    class Person{
+    class People{
         private $firstName;
         private $lastName;
         private $age;
@@ -15,5 +15,18 @@
             $this->weight = $weight;
             $this->admin = $admin;
         }
-
+        # SETTER
+        public static function setCompany($newCompany){
+            self::$company = $newCompany;
+        }
+        public function setAdmin($privileges){
+            $this->admin = $privileges;
+        }
+        # GETTER
+        public function getFullName(){
+            return "{$this->firstName} {$this->lastName}";
+        }
+        public function getBirthYear(){
+            return date("Y") - $this->age;
+        }
     }

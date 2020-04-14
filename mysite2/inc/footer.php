@@ -1,4 +1,4 @@
 <footer>
-    <p>My Website &copy; 2020</p>
+    <?php echo "My Website &copy; ". date("Y");  ?>
 </footer>
 </html>
