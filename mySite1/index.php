@@ -27,7 +27,9 @@
     echo "<br>".Person::$drinkingAge; // accessing $drinkinAge Property on Person class.
     Person::setDrinkingAge(19); // Using static method to change $drinkingAge from 21 to the argument num that was passed into the method.
     echo '<br>'. Person::$drinkingAge;
-    
+
+    $houseOne = new House("270 Park Way Dr.", "Layton", "Utah", "81111");
+    echo "<br>".$houseOne->addZip();
     ?>
 </body>
 </html>
