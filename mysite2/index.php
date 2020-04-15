@@ -11,6 +11,7 @@
            if($username && $email) {
                fwrite($userFile, "{$username} {$email}\n");
                fclose($userFile);
+               echo "<h3>File Created</h3>";
            }
         }else{
 //            $handle = fopen('users.txt', "w");
@@ -18,6 +19,7 @@
             // appending users.txt file so that the content isn't overwritten.
             file_put_contents($file, "{$username} {$email}\n", FILE_APPEND);
 //            fclose($handle);
+            echo "<h3>File Updated</h3>";
         }
     }
 //    if(filter_has_var(INPUT_POST,$email)){
