@@ -10,7 +10,7 @@
 
     // Fetch Data, and setting our result type to an associative array. ['name' => "Spencer", ect]
     $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    print_r($posts);
+//    print_r($posts);
 
     // Free Result, Frees it from Memory
     mysqli_free_result($result);
