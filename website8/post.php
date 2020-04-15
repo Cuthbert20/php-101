@@ -2,7 +2,7 @@
     require("config/config.php");
     require("config/db.php");
 
-// Get ID so we can pass it into our MySQL Query. mysqli_real_escape_string escapes any dangerous chars
+// Get ID from url query string ?id=1 so we can pass it into our MySQL Query. mysqli_real_escape_string escapes any dangerous chars
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 
 // Create Query where we SELECT a single post where id is found.
@@ -28,6 +28,4 @@ mysqli_close($conn);
     <h1><?php echo $post['title']; ?></h1>
     <small>Created On <?php echo $post['created_at']; ?> by <?php echo $post['author']; ?></small>
     <p><?php echo $post['body']; ?></p>
-</div>
-</body>
-</html>
+<?php include "inc/footer.php"; ?>

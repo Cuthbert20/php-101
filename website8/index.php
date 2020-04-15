@@ -32,7 +32,5 @@
             <a class="btn btn-default" href="<?php echo ROOT_URL; ?>post.php?id=<?php echo $post['id']; ?>">Read More</a>
         </div>
     <?php endforeach; ?>
-</div>
-</body>
-</html>
+<?php include "inc/footer.php"; ?>
 
