@@ -1,4 +1,5 @@
 <?php
+    require("config/config.php");
     require("config/db.php");
 
     // Create Query
@@ -38,7 +39,7 @@
                 <?php echo $post['author']; ?>
             </small>
             <p><?php echo $post['body']; ?></p>
-            <a class="btn btn-default" href="posts.php?id=<?php echo $post['id']; ?>">Read More</a>
+            <a class="btn btn-default" href="<?php echo ROOT_URL; ?>post.php?id=<?php echo $post['id']; ?>">Read More</a>
         </div>
     <?php endforeach; ?>
 </div>
