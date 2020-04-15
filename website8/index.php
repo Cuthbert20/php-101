@@ -3,7 +3,7 @@
     require("config/db.php");
 
     // Create Query
-    $query = 'SELECT * FROM posts';
+    $query = 'SELECT * FROM posts ORDER BY created_at DESC';
 
     // Get Results, $conn is coming from db.php short for connection.
     $result = mysqli_query($conn, $query);
