@@ -22,17 +22,7 @@ mysqli_free_result($result);
 mysqli_close($conn);
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP Blog</title>
-</head>
-<body>
+<?php include "inc/header.php"; ?>
 <div class="container">
     <a class="btn btn-default" href="<?php echo ROOT_URL; ?>">Back To Home</a>
     <h1><?php echo $post['title']; ?></h1>
