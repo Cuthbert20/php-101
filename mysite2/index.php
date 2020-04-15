@@ -28,7 +28,7 @@
 //    }
 ?>
     <div class="container">
-        <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>"  style="font-weight: bolder; font-size: 2rem" action="">
+        <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>"  style="font-weight: bolder; font-size: 2rem">
             Username: <input name="username" placeholder="Enter Username" type="text" class="form-control">
             <br>
             Email: <input name="email" placeholder="Enter Email" type="email" class="form-control">

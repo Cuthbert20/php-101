@@ -26,8 +26,12 @@
         */
 
         public static $company = "Utah School District";
+        private static $title = "Guest";
         public static function setCompany($newCompany){
             self::$company = $newCompany;
+        }
+        public static function getTitle(){
+            return self::$title;
         }
         # GETTER
         public function getName(){
@@ -36,10 +40,10 @@
     }
     # Using static method and access static properties on user Class.
 /*
-    echo user::$company;
+    echo User::$company;
     echo "<br>";
-    user::setCompany("Provo College");
-    echo user::$company;
+    User::setCompany("Provo College");
+    echo User::$company;
     echo "<br>";
 
     $userOne = new User("Stu", "stu@me.com", true);
@@ -67,3 +71,8 @@
 
     $customerOne = new Customer("Spencer", "spencer@me.com", true, 500);
     echo"<br>" . $customerOne->getBalance() . "<br>";
+    # accessing super class method on sub class instance. getName Method is from the super class User
+    echo $customerOne->getName() . "<br>";
+    # Note you can access parent static methods as long as they are public or protected.
+    echo Customer::$company;
+    echo "<br>". Customer::getTitle();
