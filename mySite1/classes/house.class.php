@@ -1,4 +1,5 @@
 <?php
+    declare(strict_types = 1);
 class House {
     private $address;
     private $city;
@@ -13,7 +14,7 @@ class House {
     # Static Property
     public static $realtor = 'Joey';
     # Static Method
-    public static function setRealtor($agent){
+    public static function setRealtor(string $agent){
         self::$realtor = $agent;
     }
     // Silly Function for fun.
