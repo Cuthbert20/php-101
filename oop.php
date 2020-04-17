@@ -1,4 +1,5 @@
 <?php
+    declare(strict_types = 1);
     class User{
         # Different Access Modifiers Public, Private, Protected.
         // Note -> is === to . notation in JavaScript.
@@ -8,7 +9,7 @@
         private $name;
         private $email;
         private $admin;
-        public function __construct($name, $email, $admin)
+        public function __construct(string $name, $email, $admin)
         {
             # Constructor runs every time a new instance/obj of the class is created
             echo __CLASS__ . " Created<br>";
