@@ -6,4 +6,4 @@ include "include/calc.inc.php";
     $cal = $_POST['cal'];
 
     $calculator = new Calc($num1, $num2, $cal);
-    echo $calculator->calcMethod();
+    echo '<h1>' . $calculator->calcMethod() . ' is the result</h1>';

@@ -22,7 +22,7 @@
         public function setAdmin($privileges){
             $this->admin = $privileges;
         }
-        # GETTER
+        # GETTER Need To switch to use __GET
         public function getFullName(){
             return "{$this->firstName} {$this->lastName}";
         }
