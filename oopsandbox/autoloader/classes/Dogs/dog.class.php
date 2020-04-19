@@ -1,4 +1,7 @@
 <?php
+    // Using namespace because the Dog class file is now inside Dogs directory.
+    namespace Dogs;
+
     class Dog{
         private $name;
         private $age;

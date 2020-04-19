@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-    $dog1 = new Dog("Cody", 12);
+    $dog1 = new Dogs\Dog("Cody", 12);
     echo $dog1->__get('name') . '<br>';
     $kennel1 = new Kennel('123 jump street', 84057);
     echo $kennel1->__get('address');
