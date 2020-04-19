@@ -1,4 +1,5 @@
 <?php
+    declare(strict_types = 1);
     include 'includes/autoloader.inc.php';
 ?>
 <!doctype html>
@@ -13,7 +14,13 @@
 <body>
     <?php
     $dog1 = new Dogs\Dog("Cody", 12);
-    echo $dog1->__get('name') . '<br>';
+    // Using try catch block.
+    try{
+        echo $dog1->__get('name') . '<br>';
+    } catch(TypeError $e){
+        echo "Error!: " . $e->getMessage();
+    }
+
     $kennel1 = new Kennel('123 jump street', 84057);
     echo $kennel1->__get('address');
     ?>
