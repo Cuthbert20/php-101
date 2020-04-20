@@ -2,6 +2,8 @@
     spl_autoload_register('myAutoLoader');
 
     function myAutoLoader($className){
+//        echo $_SERVER['HTTP_HOST'];
+//        echo $_SERVER['REQUEST_URI'];
         $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
         // if includes is not found in $url set $path to ../classes/ else $path = classes/
