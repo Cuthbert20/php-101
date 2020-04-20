@@ -14,6 +14,10 @@
     <title>Databases with OOP PHP</title>
 </head>
 <body>
-
+    <?php
+        $testObj = new Test();
+        # getting all users from mySQL DB.
+        $testObj->getUsers();
+?>
 </body>
 </html>
