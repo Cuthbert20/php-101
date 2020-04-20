@@ -17,7 +17,8 @@
     <?php
         $testObj = new Test();
         # getting all users from mySQL DB.
-        $testObj->getUsers();
+//        $testObj->getUsers();
+        $testObj->getUsersStmt("Ryker", "Knowl");
 ?>
 </body>
 </html>
