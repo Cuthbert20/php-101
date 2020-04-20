@@ -1,0 +1,3 @@
+Anonymous classes don't get stored in the memory of our website. So it is less heavy to load.
+So once create an instance of the anonymous class the class is then deleted.
+All the properties and methods now exists only on the instance/obj of that class because, the class has been deleted.
