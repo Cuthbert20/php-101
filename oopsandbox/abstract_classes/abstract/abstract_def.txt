@@ -1,0 +1,7 @@
+Think about abstract classes as a way for us to structure or create some behavior for certain classes
+in here that we know only need to get access from certain classes and not directly by creating objects inside our code.
+
+There are a few rules when it comes to abstract classes such as.....
+RULES FOR ABSTRACT CLASSES
+1. You can create objects from abstract classes. Which means if I create a class I can't access any of the properties and methods using an object I have to do it through another class.
+2. If you create an abstract method inside of a class then, that class Must Be an abstract class.
