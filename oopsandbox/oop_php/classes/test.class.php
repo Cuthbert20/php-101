@@ -32,4 +32,17 @@
             }
         }
 
+        # Inserting into DataBase using SQL Statement with user input.
+        public function setUsersStmt($first, $last, $dob){
+            $sqlQuery = "INSERT INTO users (users_first, users_last, users_dob)
+                         VALUES (?,?,?)";
+            $stmt = $this->connect()->prepare($sqlQuery);
+            try{
+            $stmt->execute([$first, $last, $dob]);
+            echo "Values Inserted into Users Table";
+            }catch(TypeError $e){
+                echo "Error: " . $e->getMessage();
+            }
+        }
+
     }

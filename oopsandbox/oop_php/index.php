@@ -17,8 +17,12 @@
     <?php
         $testObj = new Test();
         # getting all users from mySQL DB.
+        // Getting all users without Stmt ie not prepared
 //        $testObj->getUsers();
-        $testObj->getUsersStmt("Ryker", "Knowl");
+        // Get user based on first and last in Stmt, prepared, fetchAll
+//        $testObj->getUsersStmt("Ryker", "Knowl");
+        // Insert into User Table in DB with Stmt
+//          $testObj->setUsersStmt("Eva", "Knowlton", "2019-10-21");
 ?>
 </body>
 </html>
