@@ -31,8 +31,9 @@
 //    $usersObj->createUser("Cody", "White", "2010-12-12");
 
     ///////////// Controller userscontr class ///////////////////////
-    $usersObjTwo = new UsersContr();
-    $usersObjTwo->createUser("Remi", "Coley", "2017-11-18");
+    $userCon = new UsersController();
+    $userCon->createUser("Remi", "Coley", "2017-12-1");
+
 ?>
 </body>
 </html>

@@ -27,4 +27,7 @@
                 echo "Error Message: " . $e->getMessage();
             }
         }
+        protected function testing(){
+            echo "foo";
+        }
     }

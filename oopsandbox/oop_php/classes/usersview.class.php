@@ -1,7 +1,7 @@
 <?php
     // usersview.class.php will be the View for our MVC.
     // The View in MVC gets the data either from the controller or the Model and gives/shows it to the user. (Depending on how you set it up) We will get our data from the Controller.
-    include 'users.class.php';
+//    include 'users.class.php';
     class UsersView extends Users{
 
         public function showUser($first){
@@ -13,4 +13,5 @@
                 echo "<br>" . $row['users_dob'] . "<br>";
             }
         }
+
     }
