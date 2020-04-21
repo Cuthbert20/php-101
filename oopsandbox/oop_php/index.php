@@ -2,6 +2,15 @@
     include 'includes/class-autoload.inc.php';
     ////////////////// In this section we are going to connect to a database using OOP PHP. We will focus on how to interact with databases using PDO //////////////
     // See Link about PDO vs mysqli https://websitebeaver.com/php-pdo-vs-mysqli
+    if(isset($_POST['submit'])){
+
+        $first = $_POST['first'];
+        $last = $_POST['last'];
+        $dob = $_POST['dob'];
+
+        $user = new UsersController();
+        $user->createUser($first, $last, $dob);
+    }
     ?>
 
 <!doctype html>
@@ -27,13 +36,29 @@
 
     /////////////// View  usersview class ////////////////////////////
     $usersObj = new UsersView();
-    $usersObj->showUser("Eva");
+    $usersObj->showUser("Remi");
 //    $usersObj->createUser("Cody", "White", "2010-12-12");
 
-    ///////////// Controller userscontr class ///////////////////////
+    ///////////// Controller userscontroller class ///////////////////////
     $userCon = new UsersController();
-    $userCon->createUser("Remi", "Coley", "2017-12-1");
+    # WORKS!!!
+//    $userCon->createUser("Remi", "Coley", "2017-12-1");
 
 ?>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" >
+        <div>
+            <label for="">First Name</label>
+            <input type="text" name="first">
+        </div>
+        <div>
+            <label for="">Last Name</label>
+            <input type="text" name="last">
+        </div>
+        <div>
+            <label for="">Date of Birth</label>
+            <input type="text" name="dob">
+        </div>
+        <input type="submit" name="submit">
+    </form>
 </body>
 </html>
