@@ -1,0 +1,2 @@
+MCV === Model View Controller
+    The Model in MVC is what connects && interacts with the Database.

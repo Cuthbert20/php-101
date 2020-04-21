@@ -15,7 +15,8 @@
 </head>
 <body>
     <?php
-        $testObj = new Test();
+    //////////////////// test class //////////////////////////////////
+//        $testObj = new Test();
         # getting all users from mySQL DB.
         // Getting all users without Stmt ie not prepared
 //        $testObj->getUsers();
@@ -23,6 +24,15 @@
 //        $testObj->getUsersStmt("Ryker", "Knowl");
         // Insert into User Table in DB with Stmt
 //          $testObj->setUsersStmt("Eva", "Knowlton", "2019-10-21");
+
+    /////////////// View  usersview class ////////////////////////////
+    $usersObj = new UsersView();
+    $usersObj->showUser("Eva");
+//    $usersObj->createUser("Cody", "White", "2010-12-12");
+
+    ///////////// Controller userscontr class ///////////////////////
+    $usersObjTwo = new UsersContr();
+    $usersObjTwo->createUser("Remi", "Coley", "2017-11-18");
 ?>
 </body>
 </html>
