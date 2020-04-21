@@ -116,7 +116,7 @@
 
     // SELECTING DATA from Table with a limit using LIMIT Operator.
     // we could also include an offset first then the amount of rows we want to return ie LIMIT 2,3 or something like that.
-    // User will select offset && row_count
+    // User will select offset && row_count, to have this work we first must set $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); see line 16
     $offset = 2;
     $row_num = 3;
     $sql = 'SELECT title,author FROM posts LIMIT :offset, :row_num';
