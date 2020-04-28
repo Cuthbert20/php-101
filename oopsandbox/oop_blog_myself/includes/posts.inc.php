@@ -8,6 +8,8 @@ if(isset($_POST['submit'])){
 
     $post = new PostsContr();
     $post->createPost($title, $body, $author);
+    echo "Posts added to DB";
 }
+
 
 // create instance of postscontr class pass in values to method that will create a post in the Data Base.
