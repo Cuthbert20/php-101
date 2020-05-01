@@ -1,6 +1,6 @@
 <?php
 require_once 'interfaces/Logger.php';
-    class UserController{
+    class UsersController{
         protected $logger;
 
         public function __construct(Logger $logger)
