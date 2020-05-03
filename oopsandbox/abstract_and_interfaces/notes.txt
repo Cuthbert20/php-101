@@ -1,36 +1,31 @@
-Tea class before reconfigure
-In the above two classes the three methods addHotWater(), addSugar(), and addMilk() are same. So we should remove duplicated code.
-class Tea
-{
-    public function addTea()
-    {
-        var_dump('Add proper amount of tea');
-        return $this;
-    }
-    protected  function  addHotWater()
-    {
-        var_dump('Pour Hot water into cup');
-        return $this;
-    }
+When we return $this ---- returns the current object, so you can write code like this
+$object->function1()
+        ->function2()
+        ->function3();
+Instead of ---
+$object->function1();
+$object->function2();
+$object->function3();
 
-    protected  function addSugar()
-    {
-        var_dump('Add proper amount of sugar');
-        return $this;
-    }
+---
+When to user an interface vs abstract class.
+SECTION ONE---
+INTERFACE - Use an interface when you want to force developers working in your system (myself included) to implement
+a set number of methods on a class they'll be building.
+ABSTRACT CLASS - Use an abstract class when you want to force developers working in your system (myself included) to implement
+a set number of methods and you want to provide some base methods that will help them develop their child class.
 
-    protected function addMilk()
-    {
-        var_dump('Add proper amount of Milk');
-        return $this;
-    }
+NOTE - One approach that's common when you're uncertain which way to go is to create an interface and then have your
+abstract class implement that interface.
 
-    public function make()
-    {
-        return $this
-            ->addHotWater()
-            ->addSugar()
-            ->addTea()
-            ->addMilk();
-    }
-}
+SECTION TWO---
+The difference between an Abstract Class and an Interface
+Abstract Classes
+An abstract class can provide some functionality and leave the rest for derived class.
+The derived class may or may not override the concrete functions defined in the base class.
+A child class extended from an abstract class should logically be related.
+
+Interface
+An interface cannot contain any functionality. It only contains definitions of the methods.
+The derived class MUST provide code for all the methods defined in the interface.
+Completely different and non-related classes can be logically grouped together using an interface.
